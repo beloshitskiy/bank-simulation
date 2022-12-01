@@ -11,6 +11,7 @@
 		2DE4DEBA2938E56F00500801 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4DEB92938E56F00500801 /* ContentView.swift */; };
 		2DE4DEBC2938E57000500801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE4DEBB2938E57000500801 /* Assets.xcassets */; };
 		2DE4DEBF2938E57000500801 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE4DEBE2938E57000500801 /* Preview Assets.xcassets */; };
+		2DE4DEC92938E62800500801 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2DE4DEC82938E62800500801 /* PostgresClientKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE4DEC92938E62800500801 /* PostgresClientKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = BankSimulation;
+			packageProductDependencies = (
+				2DE4DEC82938E62800500801 /* PostgresClientKit */,
+			);
 			productName = BankSimulation;
 			productReference = 2DE4DEB42938E56F00500801 /* BankSimulation.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 2DE4DEAB2938E56F00500801;
+			packageReferences = (
+				2DE4DEC72938E62800500801 /* XCRemoteSwiftPackageReference "PostgresClientKit" */,
+			);
 			productRefGroup = 2DE4DEB52938E56F00500801 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -357,6 +365,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2DE4DEC72938E62800500801 /* XCRemoteSwiftPackageReference "PostgresClientKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/codewinsdotcom/PostgresClientKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2DE4DEC82938E62800500801 /* PostgresClientKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DE4DEC72938E62800500801 /* XCRemoteSwiftPackageReference "PostgresClientKit" */;
+			productName = PostgresClientKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2DE4DEAC2938E56F00500801 /* Project object */;
 }
