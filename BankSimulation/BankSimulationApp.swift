@@ -1,10 +1,3 @@
-//
-//  BankSimulationApp.swift
-//  BankSimulation
-//
-//  Created by Denis Beloshitskiy on 12/1/22.
-//
-
 import SwiftUI
 
 @main
