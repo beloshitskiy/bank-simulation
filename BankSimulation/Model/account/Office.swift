@@ -14,14 +14,14 @@ struct Region: Codable {
 
 struct City: Codable {
   var city_id: Int
-  var region: Region
+  var region: Int
   var name: String
   var description: String
 }
 
-struct Office {
+struct Office: Codable {
   var office_id: Int
-  var city: City
+  var city_id: Int
   var address: String
   var description: String
 }

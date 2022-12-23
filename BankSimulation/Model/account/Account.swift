@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Account {
+struct Account: Codable {
   let account_id: Int
-  let client_id: Client
+  let client_id: Int
   var name: String
+  var balance: Double
   var currency: Currency
   var interest_rate: Double
   var open_date: Date
@@ -18,20 +19,20 @@ struct Account {
   var type: AccountType
 }
 
-enum AccountStatus: String, CaseIterable {
+enum AccountStatus: String, CaseIterable, Codable {
   case active = "Active"
   case onValidation = "On validation"
   case frozen = "Frozen"
   case inactive = "Inactive"
 }
 
-enum AccountType: String, CaseIterable {
+enum AccountType: String, CaseIterable, Codable {
   case regular = "Regular"
   case deposit = "Deposit"
   case charity = "Charity"
 }
 
-enum Currency: String, CaseIterable {
+enum Currency: String, CaseIterable, Codable {
   case RUB = "Russian ruble"
   case USD = "US Dollar"
   case EUR = "Euro"

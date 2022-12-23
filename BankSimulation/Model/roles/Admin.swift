@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Admin {
+struct Admin: Codable {
   let admin_id: Int
   var full_name: String
   var credentials: String

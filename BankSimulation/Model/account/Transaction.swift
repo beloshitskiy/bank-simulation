@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Transaction {
+struct Transaction: Codable {
   let transaction_id: Int
-  let sender_account: Account
-  let receiver_account: Account
+  let sender_account: Int
+  let receiver_account: Int
   let date: Date
   let amount: Double
   let type: TransactionType
@@ -18,13 +18,13 @@ struct Transaction {
   let description: String
 }
 
-enum TransactionType: String, CaseIterable {
+enum TransactionType: String, CaseIterable, Codable {
   case ICA = "Inter-client accounts"
   case IC = "Inter-clients"
   case charity = "Charity"
 }
 
-enum TransactionStatus: String, CaseIterable {
+enum TransactionStatus: String, CaseIterable, Codable {
   case confirmed = "Confirmed"
   case inProgress = "In progress"
   case declined = "Declined"

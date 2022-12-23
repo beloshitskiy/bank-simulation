@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct PersonalManager {
+struct PersonalManager: Codable {
   let personal_manager_id: Int
 
   var full_name: String
   var is_active: Bool
-  var credentials: Credentials
-  var office: Office
+  var credentials: Int
+  var office: Int
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Passport {
+struct Passport: Codable {
   let passport_id: Int
   let issued_at: Date
   let issued_by: String
