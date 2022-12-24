@@ -1,31 +1,31 @@
+////
+////  Toolbar.swift
+////  BankSimulation
+////
+////  Created by Denis Beloshitskiy on 12/17/22.
+////
 //
-//  Toolbar.swift
-//  BankSimulation
+//import SwiftUI
 //
-//  Created by Denis Beloshitskiy on 12/17/22.
+//struct Toolbar: CustomizableToolbarContent {
+//  var body: some CustomizableToolbarContent {
+//    ToolbarItem(
+//      id: "toggleSidebar",
+//      placement: .navigation,
+//      showsByDefault: true
+//    ) {
+//      Button {
+//        toggleSidebar()
+//      } label: {
+//        Label("Toggle Sidebar", systemImage: "sidebar.left")
+//      }
+//      .help("Toggle Sidebar")
+//    }
+//  }
 //
-
-import SwiftUI
-
-struct Toolbar: CustomizableToolbarContent {
-  var body: some CustomizableToolbarContent {
-    ToolbarItem(
-      id: "toggleSidebar",
-      placement: .navigation,
-      showsByDefault: true
-    ) {
-      Button {
-        toggleSidebar()
-      } label: {
-        Label("Toggle Sidebar", systemImage: "sidebar.left")
-      }
-      .help("Toggle Sidebar")
-    }
-  }
-
-  func toggleSidebar() {
-    NSApp.keyWindow?
-      .contentViewController?
-      .tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
-  }
-}
+//  func toggleSidebar() {
+//    NSApp.keyWindow?
+//      .contentViewController?
+//      .tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+//  }
+//}

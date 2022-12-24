@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18B04241031DC3C11204B8FD /* init_db.sql in Resources */ = {isa = PBXBuildFile; fileRef = 18B04220CAB4E86DA7A08042 /* init_db.sql */; };
-		2D1497B029447C57001D3C39 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 2D1497AF29447C57001D3C39 /* Resources */; };
 		2D43E5CB294D144500C14817 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43E5CA294D144500C14817 /* AppState.swift */; };
 		2D43E5CF294D155E00C14817 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43E5CE294D155E00C14817 /* LoginPageView.swift */; };
 		2D43E5D1294D168700C14817 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D43E5D0294D168700C14817 /* Credentials.swift */; };
@@ -25,6 +23,12 @@
 		2D535648294D249100F8CE0B /* Menus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D535647294D249100F8CE0B /* Menus.swift */; };
 		2D53564B294D24EC00F8CE0B /* ConnectionConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D53564A294D24EC00F8CE0B /* ConnectionConfiguration.swift */; };
 		2D590A1029565F550096F2FC /* DBTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A0F29565F550096F2FC /* DBTypes.swift */; };
+		2D590A132956E22D0096F2FC /* fill_db.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2D590A122956E22D0096F2FC /* fill_db.sql */; };
+		2D590A172956E31D0096F2FC /* init_db.sql in Resources */ = {isa = PBXBuildFile; fileRef = 2D590A162956E31D0096F2FC /* init_db.sql */; };
+		2D590A1929570DEB0096F2FC /* ClientPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1829570DEB0096F2FC /* ClientPageView.swift */; };
+		2D590A1B295711BB0096F2FC /* PersonalManagerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1A295711BB0096F2FC /* PersonalManagerPageView.swift */; };
+		2D590A1D295711C30096F2FC /* AdminPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1C295711C30096F2FC /* AdminPageView.swift */; };
+		2D590A20295712720096F2FC /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1F295712720096F2FC /* SignUpPage.swift */; };
 		2DDDC4B02951140200BD5AB1 /* LoginPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC4AF2951140200BD5AB1 /* LoginPageViewModel.swift */; };
 		2DDDC4B22951147C00BD5AB1 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC4B12951147C00BD5AB1 /* Storage.swift */; };
 		2DE4DEB82938E56F00500801 /* BankSimulationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4DEB72938E56F00500801 /* BankSimulationApp.swift */; };
@@ -35,8 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18B04220CAB4E86DA7A08042 /* init_db.sql */ = {isa = PBXFileReference; lastKnownFileType = file.sql; name = init_db.sql; path = Resources/init_db.sql; sourceTree = "<group>"; };
-		2D1497AF29447C57001D3C39 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		2D43E5CA294D144500C14817 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		2D43E5CE294D155E00C14817 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		2D43E5D0294D168700C14817 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
@@ -53,6 +55,12 @@
 		2D535647294D249100F8CE0B /* Menus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menus.swift; sourceTree = "<group>"; };
 		2D53564A294D24EC00F8CE0B /* ConnectionConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionConfiguration.swift; sourceTree = "<group>"; };
 		2D590A0F29565F550096F2FC /* DBTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTypes.swift; sourceTree = "<group>"; };
+		2D590A122956E22D0096F2FC /* fill_db.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fill_db.sql; sourceTree = "<group>"; };
+		2D590A162956E31D0096F2FC /* init_db.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init_db.sql; path = ../../../Desktop/init_db.sql; sourceTree = "<group>"; };
+		2D590A1829570DEB0096F2FC /* ClientPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPageView.swift; sourceTree = "<group>"; };
+		2D590A1A295711BB0096F2FC /* PersonalManagerPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalManagerPageView.swift; sourceTree = "<group>"; };
+		2D590A1C295711C30096F2FC /* AdminPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPageView.swift; sourceTree = "<group>"; };
+		2D590A1F295712720096F2FC /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		2DDDC4AF2951140200BD5AB1 /* LoginPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewModel.swift; sourceTree = "<group>"; };
 		2DDDC4B12951147C00BD5AB1 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2DE4DEB42938E56F00500801 /* BankSimulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankSimulation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +125,29 @@
 			path = SideUI;
 			sourceTree = "<group>";
 		};
+		2D590A11295676F30096F2FC /* State */ = {
+			isa = PBXGroup;
+			children = (
+				2D43E5CA294D144500C14817 /* AppState.swift */,
+				2D53564A294D24EC00F8CE0B /* ConnectionConfiguration.swift */,
+				2DDDC4B12951147C00BD5AB1 /* Storage.swift */,
+				2D590A0F29565F550096F2FC /* DBTypes.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		2D590A1E295711DF0096F2FC /* PageViews */ = {
+			isa = PBXGroup;
+			children = (
+				2D43E5CE294D155E00C14817 /* LoginPageView.swift */,
+				2D590A1F295712720096F2FC /* SignUpPage.swift */,
+				2D590A1829570DEB0096F2FC /* ClientPageView.swift */,
+				2D590A1A295711BB0096F2FC /* PersonalManagerPageView.swift */,
+				2D590A1C295711C30096F2FC /* AdminPageView.swift */,
+			);
+			path = PageViews;
+			sourceTree = "<group>";
+		};
 		2DE4DEAB2938E56F00500801 = {
 			isa = PBXGroup;
 			children = (
@@ -137,20 +168,17 @@
 			isa = PBXGroup;
 			children = (
 				2DE4DEB72938E56F00500801 /* BankSimulationApp.swift */,
-				2D43E5CA294D144500C14817 /* AppState.swift */,
-				2D53564A294D24EC00F8CE0B /* ConnectionConfiguration.swift */,
 				2DE4DEB92938E56F00500801 /* ContentView.swift */,
 				2DDDC4AF2951140200BD5AB1 /* LoginPageViewModel.swift */,
-				2DDDC4B12951147C00BD5AB1 /* Storage.swift */,
-				2D590A0F29565F550096F2FC /* DBTypes.swift */,
-				2D43E5CE294D155E00C14817 /* LoginPageView.swift */,
+				2D590A1E295711DF0096F2FC /* PageViews */,
+				2D590A11295676F30096F2FC /* State */,
 				2D43E5D2294D168C00C14817 /* Model */,
 				2D535649294D24D400F8CE0B /* SideUI */,
 				2DE4DEBB2938E57000500801 /* Assets.xcassets */,
 				2DE4DEC02938E57000500801 /* BankSimulation.entitlements */,
-				2D1497AF29447C57001D3C39 /* Resources */,
 				2DE4DEBD2938E57000500801 /* Preview Content */,
-				18B04220CAB4E86DA7A08042 /* init_db.sql */,
+				2D590A122956E22D0096F2FC /* fill_db.sql */,
+				2D590A162956E31D0096F2FC /* init_db.sql */,
 			);
 			path = BankSimulation;
 			sourceTree = "<group>";
@@ -227,10 +255,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D590A132956E22D0096F2FC /* fill_db.sql in Resources */,
 				2DE4DEBF2938E57000500801 /* Preview Assets.xcassets in Resources */,
+				2D590A172956E31D0096F2FC /* init_db.sql in Resources */,
 				2DE4DEBC2938E57000500801 /* Assets.xcassets in Resources */,
-				2D1497B029447C57001D3C39 /* Resources in Resources */,
-				18B04241031DC3C11204B8FD /* init_db.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,20 +270,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D590A1029565F550096F2FC /* DBTypes.swift in Sources */,
+				2D590A1D295711C30096F2FC /* AdminPageView.swift in Sources */,
 				2D535632294D201600F8CE0B /* Admin.swift in Sources */,
 				2D53563D294D215B00F8CE0B /* Account.swift in Sources */,
 				2D43E5CB294D144500C14817 /* AppState.swift in Sources */,
 				2DDDC4B22951147C00BD5AB1 /* Storage.swift in Sources */,
+				2D590A20295712720096F2FC /* SignUpPage.swift in Sources */,
 				2D43E5CF294D155E00C14817 /* LoginPageView.swift in Sources */,
 				2DE4DEBA2938E56F00500801 /* ContentView.swift in Sources */,
 				2D53562C294D1F7A00F8CE0B /* Office.swift in Sources */,
 				2D43E5D1294D168700C14817 /* Credentials.swift in Sources */,
 				2D53564B294D24EC00F8CE0B /* ConnectionConfiguration.swift in Sources */,
 				2D535640294D228800F8CE0B /* Application.swift in Sources */,
+				2D590A1B295711BB0096F2FC /* PersonalManagerPageView.swift in Sources */,
 				2DE4DEB82938E56F00500801 /* BankSimulationApp.swift in Sources */,
 				2D535644294D242300F8CE0B /* SidebarView.swift in Sources */,
 				2D535635294D205C00F8CE0B /* Client.swift in Sources */,
 				2D535639294D20E600F8CE0B /* Passport.swift in Sources */,
+				2D590A1929570DEB0096F2FC /* ClientPageView.swift in Sources */,
 				2D535646294D248200F8CE0B /* Toolbar.swift in Sources */,
 				2D535637294D206600F8CE0B /* Personal Manager.swift in Sources */,
 				2D535648294D249100F8CE0B /* Menus.swift in Sources */,

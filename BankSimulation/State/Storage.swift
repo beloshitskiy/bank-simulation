@@ -16,6 +16,8 @@ final class Storage {
   var clients = [Client]()
   var managers = [PersonalManager]()
   var admin = [Admin]()
+  
+  var credentials = Set<Credentials>()
 
   var accounts = [Account]()
   var applications = [Application]()
@@ -68,6 +70,18 @@ final class Storage {
       
       for row in adminCursor {
         admin.append(try row.get().decodeByColumnName(Admin.self))
+      }
+      
+      // credentials
+      let credentialsText = "SELECT * FROM credentials;"
+      let credentialsStatement = try connection.prepareStatement(text: credentialsText)
+      defer { credentialsStatement.close() }
+      
+      let credentialsCursor = try credentialsStatement.execute(retrieveColumnMetadata: true)
+      defer { credentialsCursor.close() }
+      
+      for row in credentialsCursor {
+        credentials.insert(try row.get().decodeByColumnName(Credentials.self))
       }
       
       // accounts

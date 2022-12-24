@@ -8,7 +8,7 @@
 import Foundation
 import PostgresClientKit
 
-struct Client: Codable {
+struct Client: Codable, Hashable {
   let client_id: Int
 
   var address: String
@@ -17,26 +17,15 @@ struct Client: Codable {
   var is_active: Bool
   var passport: Int
   var credentials: Int
-//  var personal_manager: PersonalManager
   var personal_manager: Int
 
-//  init(
-//    client_id: Int,
-//    address: String,
-//    birthday: Date,
-//    full_name: String,
-//    is_active: Bool,
-//    passport: Passport,
-//    credentials: Credentials,
-//    personal_manager: Int
-//  ) {
-//    self.client_id = client_id
-//    self.address = address
-//    self.birthday = birthday
-//    self.full_name = full_name
-//    self.is_active = is_active
-//    self.passport = passport
-//    self.credentials = credentials
-//    self.personal_manager = personal_manager
-//  }
+  static let empty = Client(
+    client_id: 0,
+    address: "",
+    full_name: "",
+    is_active: false,
+    passport: 0,
+    credentials: 0,
+    personal_manager: 0
+  )
 }
