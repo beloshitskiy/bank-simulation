@@ -10,8 +10,7 @@ import SwiftUI
 struct LoginPageView: View {
   @EnvironmentObject var appState: AppState
   var body: some View {
-    let model = LoginPageViewModel(appState: appState)
-    return LoginView(model: model)
+    LoginView(model: LoginPageViewModel(appState: appState))
   }
 }
 
@@ -21,48 +20,71 @@ struct LoginView: View {
   @State private var password = "VNB43JLX5MR"
   @State private var isAlertHidden = false
   @State var model: LoginPageViewModel
-  @State private var curPage = Page.loginPage
+  @State private var currentPage = Page.loginPage
   @State private var buttonHidden = false
   var body: some View {
-    VStack {
-      Text("Вход в ABC-банк")
-        .font(.system(size: 28)).bold()
-        .frame(width: 420, height: 30)
-        .padding([.horizontal, .top])
-      HStack {
-        VStack(spacing: 10) {
-          TextField("Логин", text: $currentCredentials.login)
-            .font(.system(size: 15))
-            .textFieldStyle(.roundedBorder)
+    ZStack {
+      RoundedRectangle(cornerRadius: cornerRadiusC, style: .continuous)
+        .fill(Color.blue)
+        .frame(
+          minWidth: backgoroundCardSize.width,
+          minHeight: backgoroundCardSize.height
+        )
+        .aspectRatio(aspectRatioC, contentMode: .fit)
+        .padding()
+      VStack {
+        VStack(alignment: .leading) {
+          Text("Вход в ABC-банк")
+            .font(.largeTitle)
+            .bold()
+            .foregroundColor(.white)
+            .padding([.horizontal, .top])
+          HStack {
+            VStack(spacing: 10) {
+              TextField("Логин", text: $currentCredentials.login)
+                .font(.headline)
+                .foregroundColor(.white)
+                .textFieldStyle(.roundedBorder)
 
-          SecureField("Пароль", text: $currentCredentials.password)
-            .font(.system(size: 15))
-            .textFieldStyle(.roundedBorder)
-            
-        }.padding()
+              SecureField("Пароль", text: $currentCredentials.password)
+                .font(.headline)
+                .foregroundColor(.white)
+                .textFieldStyle(.roundedBorder)
+            }.padding()
+          }
+        }.frame(width: cardSize.width, height: cardSize.height)
+          .padding()
 
         ZStack {
           Button {
             currentCredentials.login = login
             currentCredentials.password = password
-            
-            if let client = model.performClientLogin(with: currentCredentials) {
-              curPage = .clientPage(client: client)
+
+            if let tuple = model.performLogin(with: currentCredentials) {
+              switch tuple.role {
+                case .client: currentPage = .clientPage(client: model.getClient(by: tuple.id))
+                case .manager: currentPage = .managerPage(manager: model.getManager(by: tuple.id))
+                case .admin: currentPage = .adminPage(admin: model.getAdmin(by: tuple.id))
+              }
               buttonHidden = true
             } else {
               isAlertHidden = true
             }
           } label: {
-            Text("Продолжить").font(.system(size: 15))
+            Text("Продолжить").font(.headline)
           }.opacity(!buttonHidden ? 1 : 0)
+            .buttonStyle(.bordered)
 
-          NavigationLink(value: curPage, label: {
-            Text("Продолжить").font(.system(size: 15))
+          NavigationLink(value: currentPage, label: {
+            Text("Продолжить").font(.headline)
           }).opacity(!buttonHidden ? 0 : 1)
+            .buttonStyle(.bordered)
         }
-        .frame(width: 160, height: 55)
-        
-        
+
+        NavigationLink(value: Page.registrationPage, label: {
+          Text("Регистрация").font(.headline)
+        }).buttonStyle(.plain)
+
       }.onChange(of: currentCredentials) { _ in
         buttonHidden = false
       }
@@ -73,12 +95,28 @@ struct LoginView: View {
     }.alert("Некорректный логин или пароль!", isPresented: $isAlertHidden, actions: {
       Button("Хорошо") {}
     })
-    
-    .padding()
-    .background(RoundedRectangle(cornerRadius: 25).stroke(lineWidth: 5))
-    .frame(maxWidth: 600)
   }
 }
+
+private let screen = CGSize(width: 1000, height: 750)
+private let backgoroundCardSize = CGSize(
+  width: screen.width * 0.7,
+  height: screen.height * 0.3
+)
+private let cardSize = CGSize(
+  width: backgoroundCardSize.width * 0.5,
+  height: backgoroundCardSize.height * 0.5
+)
+
+private let cornerRadiusC: CGFloat = 13
+private let aspectRatioC: CGFloat = 3 / 4.5
+
+private let titleFontSize = screen.width * 0.08
+private let regularFontSize = screen.width * 0.04
+
+private let mainSpacing = screen.height * 0.055
+private let groupSpacing = screen.width * 0.04
+private let buttonSize = CGSize(width: screen.width * 0.5, height: screen.height * 0.06)
 
 struct LoginPageView_Previews: PreviewProvider {
   static var previews: some View {

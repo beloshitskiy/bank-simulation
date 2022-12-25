@@ -1,5 +1,3 @@
-import Foundation
-
 struct Credentials: Codable, Hashable {
   var id: Int
   var login: String

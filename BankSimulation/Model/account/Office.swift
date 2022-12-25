@@ -1,5 +1,3 @@
-import Foundation
-
 struct Region: Codable {
   var id: Int
   var region_name: String
