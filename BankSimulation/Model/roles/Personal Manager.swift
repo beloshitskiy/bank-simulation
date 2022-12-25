@@ -8,7 +8,7 @@
 import Foundation
 
 struct PersonalManager: Codable, Hashable {
-  var personal_manager_id: Int
+  var id: Int
 
   var full_name: String
   var is_active: Bool

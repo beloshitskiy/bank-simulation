@@ -8,25 +8,19 @@
 import Foundation
 
 final class AccountFactory {
-  let appState: AppState?
-  
-  init(appState: AppState? = nil) {
+  let appState: AppState
+
+  init(appState: AppState) {
     self.appState = appState
   }
 
-  func makeAccount(
-    for clientId: Int,
-    name: String,
-    currency: Currency,
-    type: AccountType
-  ) -> Int? {
-    guard let appState else { return nil }
+  func makeAccount(for clientId: Int, name: String, currency: Currency, type: AccountType) -> Int {
     var account = Account.empty
 
     if let last = appState.storage.accounts.last {
-      account.account_id = last.account_id + 1
+      account.id = last.id + 1
     } else {
-      account.account_id = 1
+      account.id = 1
     }
 
     account.client_id = clientId
@@ -42,7 +36,7 @@ final class AccountFactory {
     account.type = type
 
     appState.storage.accounts.appendAndStore(account, appState: appState)
-    
-    return account.account_id
+
+    return account.id
   }
 }

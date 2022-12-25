@@ -19,7 +19,7 @@ final class LoginPageViewModel {
   func performClientLogin(with cr: Credentials) -> Client? {
     guard let appState,
           let ind = appState.storage.credentials
-          .first(where: { $0.login == cr.login && $0.password == cr.password })?.credentials_id
+          .first(where: { $0.login == cr.login && $0.password == cr.password })?.id
     else { return nil }
 
     return appState.storage.clients.first { $0.credentials == ind }

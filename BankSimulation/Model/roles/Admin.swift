@@ -8,7 +8,7 @@
 import Foundation
 
 struct Admin: Codable, Hashable {
-  var admin_id: Int
+  var id: Int
   var full_name: String
   var credentials: String
 }

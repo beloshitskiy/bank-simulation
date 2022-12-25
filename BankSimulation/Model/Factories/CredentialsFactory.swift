@@ -9,21 +9,19 @@ import CryptoKit
 import Foundation
 
 final class CredentialsFactory {
-  let appState: AppState?
+  let appState: AppState
   
-  init(appState: AppState? = nil) {
+  init(appState: AppState) {
     self.appState = appState
   }
 
-  func makeCredentials(login: String, password: String) -> Int? {
-    guard let appState else { return nil }
-
+  func makeCredentials(login: String, password: String) -> Int {
     var credentials = Credentials.empty
 
     if let last = appState.storage.credentials.last {
-      credentials.credentials_id = last.credentials_id + 1
+      credentials.id = last.id + 1
     } else {
-      credentials.credentials_id = 1
+      credentials.id = 1
     }
 
     credentials.login = login
@@ -32,6 +30,6 @@ final class CredentialsFactory {
 
     appState.storage.credentials.appendAndStore(credentials, appState: appState)
     
-    return credentials.credentials_id
+    return credentials.id
   }
 }

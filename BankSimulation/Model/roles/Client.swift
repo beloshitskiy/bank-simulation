@@ -9,7 +9,7 @@ import Foundation
 import PostgresClientKit
 
 struct Client: Codable, Hashable {
-  var client_id: Int
+  var id: Int
 
   var address: String
   var birthday: Date
@@ -20,7 +20,7 @@ struct Client: Codable, Hashable {
   var personal_manager: Int
 
   static let empty = Client(
-    client_id: 0,
+    id: 0,
     address: "",
     birthday: .distantPast,
     full_name: "",

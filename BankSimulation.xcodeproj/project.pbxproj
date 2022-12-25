@@ -98,8 +98,7 @@
 		2D43E5D2294D168C00C14817 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2DC4C7B029581BD90047D579 /* Array+Postgres.swift */,
-				2DC4C7B2295820570047D579 /* String+Postgres.swift */,
+				2DC4C7B4295861BB0047D579 /* Extensions */,
 				2DC4C7AB295812220047D579 /* Factories */,
 				2D53563E294D216100F8CE0B /* account */,
 				2D53563A294D213800F8CE0B /* roles */,
@@ -172,6 +171,15 @@
 				2DC4C7AE2958198F0047D579 /* ApplicationFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		2DC4C7B4295861BB0047D579 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DC4C7B029581BD90047D579 /* Array+Postgres.swift */,
+				2DC4C7B2295820570047D579 /* String+Postgres.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2DE4DEAB2938E56F00500801 = {

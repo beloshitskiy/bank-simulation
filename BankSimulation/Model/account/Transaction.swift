@@ -8,7 +8,7 @@
 import Foundation
 
 struct Transaction: Codable, Hashable {
-  var transaction_id: Int
+  var id: Int
   var sender_account: Int
   var receiver_account: Int
   var date: Date
@@ -16,6 +16,17 @@ struct Transaction: Codable, Hashable {
   var type: TransactionType
   var status: TransactionStatus
   var description: String
+
+  static let empty = Transaction(
+    id: 0,
+    sender_account: 0,
+    receiver_account: 0,
+    date: .distantPast,
+    amount: 0,
+    type: .IC,
+    status: .inProgress,
+    description: ""
+  )
 }
 
 enum TransactionType: String, CaseIterable, Codable {

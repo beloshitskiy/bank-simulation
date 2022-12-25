@@ -8,9 +8,9 @@
 import Foundation
 
 struct Credentials: Codable, Hashable {
-  var credentials_id: Int
+  var id: Int
   var login: String
   var password: String
 
-  static let empty = Credentials(credentials_id: 0, login: "", password: "")
+  static let empty = Credentials(id: 0, login: "", password: "")
 }

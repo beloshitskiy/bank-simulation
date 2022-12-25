@@ -8,7 +8,7 @@
 import Foundation
 
 struct Account: Codable, Hashable {
-  var account_id: Int
+  var id: Int
   var client_id: Int
   var name: String
   var balance: Double
@@ -19,13 +19,13 @@ struct Account: Codable, Hashable {
   var type: AccountType
 
   static let empty = Account(
-    account_id: 0,
+    id: 0,
     client_id: 0,
     name: "",
     balance: 0,
     currency: .RUB,
     interest_rate: 0.0,
-    open_date: .now,
+    open_date: .distantPast,
     status: .inactive,
     type: .regular
   )

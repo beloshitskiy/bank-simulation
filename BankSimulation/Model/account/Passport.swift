@@ -8,7 +8,7 @@
 import Foundation
 
 struct Passport: Codable {
-  var passport_id: Int
+  var id: Int
   var issued_at: Date
   var issued_by: String
   var series: Int
@@ -16,7 +16,7 @@ struct Passport: Codable {
   var is_validated: Bool
 
   static let empty = Passport(
-    passport_id: 0,
+    id: 0,
     issued_at: .distantPast,
     issued_by: "",
     series: 0,

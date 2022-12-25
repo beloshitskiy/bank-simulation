@@ -15,7 +15,7 @@ struct ClientPageView: View {
       List {
         Section("Счета") {
           ForEach(
-            appState.storage.accounts.filter { $0.client_id == client.client_id },
+            appState.storage.accounts.filter { $0.client_id == client.id },
             id: \.self
           ) { account in
             AccountCardView(account: account)
@@ -47,7 +47,7 @@ struct ClientPageView: View {
           ForEach(
             appState.storage.transactions.filter {
               var clientAccounts = Set<Int>()
-              appState.storage.accounts.filter { $0.client_id == client.client_id }
+              appState.storage.accounts.filter { $0.client_id == client.id }
                 .forEach { account in
                   clientAccounts.insert(account.client_id)
                 }
@@ -59,9 +59,9 @@ struct ClientPageView: View {
             TransactionCardView(
               transaction: transaction,
               senderAccount: appState.storage.accounts
-                .first(where: { $0.account_id == transaction.sender_account }),
+                .first(where: { $0.id == transaction.sender_account }),
               recieverAccount: appState.storage.accounts
-                .first(where: { $0.account_id == transaction.receiver_account })
+                .first(where: { $0.id == transaction.receiver_account })
             )
           }
         }.font(.title2).bold().foregroundColor(.white)
@@ -116,7 +116,7 @@ struct TransactionCardView: View {
             Text(transaction.amount, format: .currency(code: recieverAccount.currency.code))
               .font(.headline).bold()
           } else {
-            if transaction.sender_account != senderAccount.account_id {
+            if transaction.sender_account != senderAccount.id {
               Text(transaction.amount, format: .currency(code: recieverAccount.currency.code))
                 .font(.headline).bold()
             } else {

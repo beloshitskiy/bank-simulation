@@ -10,9 +10,9 @@ import Foundation
 import Foundation
 
 final class ClientFactory {
-  let appState: AppState?
+  let appState: AppState
 
-  init(appState: AppState? = nil) {
+  init(appState: AppState) {
     self.appState = appState
   }
 
@@ -24,26 +24,24 @@ final class ClientFactory {
     birthday: Date,
     passport: Passport,
     address: String
-  ) -> Int? {
-    guard let appState else { return nil }
-
+  ) -> Int {
     var client = Client.empty
 
     if let last = appState.storage.clients.last {
-      client.client_id = last.client_id + 1
+      client.id = last.id + 1
     } else {
-      client.client_id = 1
+      client.id = 1
     }
 
     client.full_name = fullName
     client.credentials = CredentialsFactory(appState: appState)
-      .makeCredentials(login: login, password: password) ?? 0
+      .makeCredentials(login: login, password: password)
     client.birthday = birthday
-    client.passport = passport.passport_id
+    client.passport = passport.id
     client.address = address
     client.is_active = true
 
-    return client.client_id
+    return client.id
   }
 }
 
