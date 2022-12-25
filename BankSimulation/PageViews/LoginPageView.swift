@@ -24,13 +24,12 @@ struct LoginView: View {
   @State private var buttonHidden = false
   var body: some View {
     ZStack {
-      RoundedRectangle(cornerRadius: cornerRadiusC, style: .continuous)
-        .fill(Color.blue)
+      RoundedRectangle(cornerRadius: 25, style: .continuous)
+        .fill(Color.background)
         .frame(
           minWidth: backgoroundCardSize.width,
           minHeight: backgoroundCardSize.height
         )
-        .aspectRatio(aspectRatioC, contentMode: .fit)
         .padding()
       VStack {
         VStack(alignment: .leading) {
@@ -107,16 +106,6 @@ private let cardSize = CGSize(
   width: backgoroundCardSize.width * 0.5,
   height: backgoroundCardSize.height * 0.5
 )
-
-private let cornerRadiusC: CGFloat = 13
-private let aspectRatioC: CGFloat = 3 / 4.5
-
-private let titleFontSize = screen.width * 0.08
-private let regularFontSize = screen.width * 0.04
-
-private let mainSpacing = screen.height * 0.055
-private let groupSpacing = screen.width * 0.04
-private let buttonSize = CGSize(width: screen.width * 0.5, height: screen.height * 0.06)
 
 struct LoginPageView_Previews: PreviewProvider {
   static var previews: some View {

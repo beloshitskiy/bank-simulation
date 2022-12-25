@@ -27,7 +27,7 @@
 		2D590A1929570DEB0096F2FC /* ClientPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1829570DEB0096F2FC /* ClientPageView.swift */; };
 		2D590A1B295711BB0096F2FC /* PersonalManagerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1A295711BB0096F2FC /* PersonalManagerPageView.swift */; };
 		2D590A1D295711C30096F2FC /* AdminPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1C295711C30096F2FC /* AdminPageView.swift */; };
-		2D590A20295712720096F2FC /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1F295712720096F2FC /* SignUpPage.swift */; };
+		2D590A20295712720096F2FC /* SignUpPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1F295712720096F2FC /* SignUpPageView.swift */; };
 		2DB4B2CC29590035007A18DD /* Avenir-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB4B2C929590035007A18DD /* Avenir-Italic.otf */; };
 		2DB4B2CD29590035007A18DD /* Avenir-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB4B2CA29590035007A18DD /* Avenir-Bold.otf */; };
 		2DB4B2CE29590035007A18DD /* Avenir.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB4B2CB29590035007A18DD /* Avenir.otf */; };
@@ -69,7 +69,7 @@
 		2D590A1829570DEB0096F2FC /* ClientPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPageView.swift; sourceTree = "<group>"; };
 		2D590A1A295711BB0096F2FC /* PersonalManagerPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalManagerPageView.swift; sourceTree = "<group>"; };
 		2D590A1C295711C30096F2FC /* AdminPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPageView.swift; sourceTree = "<group>"; };
-		2D590A1F295712720096F2FC /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		2D590A1F295712720096F2FC /* SignUpPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageView.swift; sourceTree = "<group>"; };
 		2DB4B2C929590035007A18DD /* Avenir-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Italic.otf"; sourceTree = "<group>"; };
 		2DB4B2CA29590035007A18DD /* Avenir-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Avenir-Bold.otf"; sourceTree = "<group>"; };
 		2DB4B2CB29590035007A18DD /* Avenir.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Avenir.otf; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				2D43E5CE294D155E00C14817 /* LoginPageView.swift */,
-				2D590A1F295712720096F2FC /* SignUpPage.swift */,
+				2D590A1F295712720096F2FC /* SignUpPageView.swift */,
 				2D590A1829570DEB0096F2FC /* ClientPageView.swift */,
 				2D590A1A295711BB0096F2FC /* PersonalManagerPageView.swift */,
 				2D590A1C295711C30096F2FC /* AdminPageView.swift */,
@@ -335,7 +335,7 @@
 				2DC4C7A8295744FF0047D579 /* AccountFactory.swift in Sources */,
 				2DDDC4B22951147C00BD5AB1 /* Storage.swift in Sources */,
 				2DB4B2D429590CDC007A18DD /* Role.swift in Sources */,
-				2D590A20295712720096F2FC /* SignUpPage.swift in Sources */,
+				2D590A20295712720096F2FC /* SignUpPageView.swift in Sources */,
 				2D43E5CF294D155E00C14817 /* LoginPageView.swift in Sources */,
 				2DC4C7AA295810380047D579 /* ClientFactory.swift in Sources */,
 				2DC4C7AF2958198F0047D579 /* ApplicationFactory.swift in Sources */,

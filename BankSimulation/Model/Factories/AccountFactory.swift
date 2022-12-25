@@ -7,6 +7,7 @@ final class AccountFactory {
     self.appState = appState
   }
 
+  @discardableResult
   func makeAccount(for clientId: Int, name: String, currency: Currency, type: AccountType) -> Int {
     var account = Account.empty
 

@@ -15,7 +15,7 @@ struct BankSimulationApp: App {
                   .environmentObject(state)
 
               case .registrationPage:
-                SignUpPage()
+                SignUpPageView()
                   .environmentObject(state)
 
               case let .clientPage(client):
@@ -32,6 +32,6 @@ struct BankSimulationApp: App {
             }
           }
       }
-    }
+    }.windowStyle(HiddenTitleBarWindowStyle())
   }
 }

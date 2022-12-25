@@ -8,6 +8,7 @@ final class CredentialsFactory {
     self.appState = appState
   }
 
+  @discardableResult
   func makeCredentials(login: String, password: String) -> Int {
     var credentials = Credentials.empty
 

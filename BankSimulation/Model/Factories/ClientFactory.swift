@@ -8,6 +8,7 @@ final class ClientFactory {
   }
 
   // no personal manager here!
+  @discardableResult
   func makeClient(
     fullName: String,
     login: String,
@@ -31,6 +32,8 @@ final class ClientFactory {
     client.passport = passport.id
     client.address = address
     client.is_active = true
+    
+    appState.storage.clients.appendAndStore(client, appState: appState)
 
     return client.id
   }

@@ -7,6 +7,7 @@ final class ApplicationFactory {
     self.appState = appState
   }
 
+  @discardableResult
   func makeNewApplication(
     for client: Client,
     where type: ApplicationType,
