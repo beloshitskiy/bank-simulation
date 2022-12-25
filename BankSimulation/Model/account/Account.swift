@@ -1,10 +1,3 @@
-//
-//  Account.swift
-//  BankSimulation
-//
-//  Created by Denis Beloshitskiy on 12/17/22.
-//
-
 import Foundation
 
 struct Account: Codable, Hashable {

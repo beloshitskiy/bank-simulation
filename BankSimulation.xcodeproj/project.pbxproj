@@ -13,7 +13,7 @@
 		2D53562C294D1F7A00F8CE0B /* Office.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D53562B294D1F7A00F8CE0B /* Office.swift */; };
 		2D535632294D201600F8CE0B /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D535631294D201600F8CE0B /* Admin.swift */; };
 		2D535635294D205C00F8CE0B /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D535634294D205C00F8CE0B /* Client.swift */; };
-		2D535637294D206600F8CE0B /* Personal Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D535636294D206600F8CE0B /* Personal Manager.swift */; };
+		2D535637294D206600F8CE0B /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D535636294D206600F8CE0B /* Manager.swift */; };
 		2D535639294D20E600F8CE0B /* Passport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D535638294D20E600F8CE0B /* Passport.swift */; };
 		2D53563D294D215B00F8CE0B /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D53563C294D215B00F8CE0B /* Account.swift */; };
 		2D535640294D228800F8CE0B /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D53563F294D228800F8CE0B /* Application.swift */; };
@@ -50,7 +50,7 @@
 		2D53562B294D1F7A00F8CE0B /* Office.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office.swift; sourceTree = "<group>"; };
 		2D535631294D201600F8CE0B /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		2D535634294D205C00F8CE0B /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
-		2D535636294D206600F8CE0B /* Personal Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Personal Manager.swift"; sourceTree = "<group>"; };
+		2D535636294D206600F8CE0B /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		2D535638294D20E600F8CE0B /* Passport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passport.swift; sourceTree = "<group>"; };
 		2D53563C294D215B00F8CE0B /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		2D53563F294D228800F8CE0B /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				2D535634294D205C00F8CE0B /* Client.swift */,
-				2D535636294D206600F8CE0B /* Personal Manager.swift */,
+				2D535636294D206600F8CE0B /* Manager.swift */,
 				2D535631294D201600F8CE0B /* Admin.swift */,
 			);
 			path = roles;
@@ -325,7 +325,7 @@
 				2D535639294D20E600F8CE0B /* Passport.swift in Sources */,
 				2D590A1929570DEB0096F2FC /* ClientPageView.swift in Sources */,
 				2D535646294D248200F8CE0B /* Toolbar.swift in Sources */,
-				2D535637294D206600F8CE0B /* Personal Manager.swift in Sources */,
+				2D535637294D206600F8CE0B /* Manager.swift in Sources */,
 				2D535648294D249100F8CE0B /* Menus.swift in Sources */,
 				2D535642294D232300F8CE0B /* Transaction.swift in Sources */,
 				2DDDC4B02951140200BD5AB1 /* LoginPageViewModel.swift in Sources */,

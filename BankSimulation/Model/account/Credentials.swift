@@ -1,10 +1,3 @@
-//
-//  Credentials.swift
-//  BankSimulation
-//
-//  Created by Denis Beloshitskiy on 12/17/22.
-//
-
 import Foundation
 
 struct Credentials: Codable, Hashable {

@@ -10,7 +10,7 @@ enum Page: Hashable {
   case loginPage
   case registrationPage
   case clientPage(client: Client)
-  case managerPage(manager: PersonalManager)
+  case managerPage(manager: Manager)
   case adminPage(admin: Admin)
 }
 

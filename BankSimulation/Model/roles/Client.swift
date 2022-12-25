@@ -1,16 +1,7 @@
-//
-//  Client.swift
-//  BankSimulation
-//
-//  Created by Denis Beloshitskiy on 12/17/22.
-//
-
 import Foundation
-import PostgresClientKit
 
 struct Client: Codable, Hashable {
   var id: Int
-
   var address: String
   var birthday: Date
   var full_name: String

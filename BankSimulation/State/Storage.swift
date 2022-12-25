@@ -1,10 +1,3 @@
-//
-//  Storage.swift
-//  BankSimulation
-//
-//  Created by Denis Beloshitskiy on 12/20/22.
-//
-
 import Foundation
 import PostgresClientKit
 
@@ -13,18 +6,20 @@ final class Storage: ObservableObject {
 
   static let `default` = Storage()
 
-  @Published var clients = [Client]()
-  @Published var managers = [PersonalManager]()
-  @Published var admin = [Admin]()
   @Published var credentials = [Credentials]()
+
+  @Published var cities = [City]()
+  @Published var regions = [Region]()
+  @Published var offices = [Office]()
+
+  @Published var admin = [Admin]()
+  @Published var managers = [Manager]()
+  @Published var passports = [Passport]()
+  @Published var clients = [Client]()
 
   @Published var accounts = [Account]()
   @Published var applications = [Application]()
   @Published var transactions = [Transaction]()
-
-  @Published var offices = [Office]()
-  @Published var cities = [City]()
-  @Published var regions = [Region]()
 
   // MARK: - loading data
 
@@ -32,28 +27,52 @@ final class Storage: ObservableObject {
     guard let connection = connection else { return }
 
     do {
-      // clients
-      let clientsText = "SELECT * FROM clients;"
-      let clientsStatement = try connection.prepareStatement(text: clientsText)
-      defer { clientsStatement.close() }
+      // credentials
+      let credentialsText = "SELECT * FROM credentials;"
+      let credentialsStatement = try connection.prepareStatement(text: credentialsText)
+      defer { credentialsStatement.close() }
 
-      let clientsCursor = try clientsStatement.execute(retrieveColumnMetadata: true)
-      defer { clientsCursor.close() }
+      let credentialsCursor = try credentialsStatement.execute(retrieveColumnMetadata: true)
+      defer { credentialsCursor.close() }
 
-      for row in clientsCursor {
-        clients.append(try row.get().decodeByColumnName(Client.self))
+      for row in credentialsCursor {
+        credentials.append(try row.get().decodeByColumnName(Credentials.self))
       }
 
-      // managers
-      let managersText = "SELECT * FROM personal_managers;"
-      let managersStatement = try connection.prepareStatement(text: managersText)
-      defer { managersStatement.close() }
+      // cities
+      let citiesText = "SELECT * FROM cities;"
+      let citiesStatement = try connection.prepareStatement(text: citiesText)
+      defer { citiesStatement.close() }
 
-      let managersCursor = try managersStatement.execute(retrieveColumnMetadata: true)
-      defer { managersCursor.close() }
+      let citiesCursor = try citiesStatement.execute(retrieveColumnMetadata: true)
+      defer { citiesCursor.close() }
 
-      for row in managersCursor {
-        managers.append(try row.get().decodeByColumnName(PersonalManager.self))
+      for row in citiesCursor {
+        cities.append(try row.get().decodeByColumnName(City.self))
+      }
+
+      // regions
+      let regionsText = "SELECT * FROM regions;"
+      let regionsStatement = try connection.prepareStatement(text: regionsText)
+      defer { regionsStatement.close() }
+
+      let regionsCursor = try regionsStatement.execute(retrieveColumnMetadata: true)
+      defer { regionsCursor.close() }
+
+      for row in regionsCursor {
+        regions.append(try row.get().decodeByColumnName(Region.self))
+      }
+
+      // offices
+      let officesText = "SELECT * FROM offices;"
+      let officesStatement = try connection.prepareStatement(text: officesText)
+      defer { officesStatement.close() }
+
+      let officesCursor = try officesStatement.execute(retrieveColumnMetadata: true)
+      defer { officesCursor.close() }
+
+      for row in officesCursor {
+        offices.append(try row.get().decodeByColumnName(Office.self))
       }
 
       // admin
@@ -68,16 +87,40 @@ final class Storage: ObservableObject {
         admin.append(try row.get().decodeByColumnName(Admin.self))
       }
 
-      // credentials
-      let credentialsText = "SELECT * FROM credentials;"
-      let credentialsStatement = try connection.prepareStatement(text: credentialsText)
-      defer { credentialsStatement.close() }
+      // managers
+      let managersText = "SELECT * FROM personal_managers;"
+      let managersStatement = try connection.prepareStatement(text: managersText)
+      defer { managersStatement.close() }
 
-      let credentialsCursor = try credentialsStatement.execute(retrieveColumnMetadata: true)
-      defer { credentialsCursor.close() }
+      let managersCursor = try managersStatement.execute(retrieveColumnMetadata: true)
+      defer { managersCursor.close() }
 
-      for row in credentialsCursor {
-        credentials.append(try row.get().decodeByColumnName(Credentials.self))
+      for row in managersCursor {
+        managers.append(try row.get().decodeByColumnName(Manager.self))
+      }
+
+      // passports
+      let passportsText = "SELECT * FROM passports;"
+      let passportsStatement = try connection.prepareStatement(text: passportsText)
+      defer { passportsStatement.close() }
+
+      let passportsCursor = try passportsStatement.execute(retrieveColumnMetadata: true)
+      defer { passportsCursor.close() }
+
+      for row in passportsCursor {
+        passports.append(try row.get().decodeByColumnName(Passport.self))
+      }
+
+      // clients
+      let clientsText = "SELECT * FROM clients;"
+      let clientsStatement = try connection.prepareStatement(text: clientsText)
+      defer { clientsStatement.close() }
+
+      let clientsCursor = try clientsStatement.execute(retrieveColumnMetadata: true)
+      defer { clientsCursor.close() }
+
+      for row in clientsCursor {
+        clients.append(try row.get().decodeByColumnName(Client.self))
       }
 
       // accounts
@@ -114,42 +157,6 @@ final class Storage: ObservableObject {
 
       for row in transactionsCursor {
         transactions.append(try row.get().decodeByColumnName(Transaction.self))
-      }
-
-      // offices
-      let officesText = "SELECT * FROM offices;"
-      let officesStatement = try connection.prepareStatement(text: officesText)
-      defer { officesStatement.close() }
-
-      let officesCursor = try officesStatement.execute(retrieveColumnMetadata: true)
-      defer { officesCursor.close() }
-
-      for row in officesCursor {
-        offices.append(try row.get().decodeByColumnName(Office.self))
-      }
-
-      // cities
-      let citiesText = "SELECT * FROM cities;"
-      let citiesStatement = try connection.prepareStatement(text: citiesText)
-      defer { citiesStatement.close() }
-
-      let citiesCursor = try citiesStatement.execute(retrieveColumnMetadata: true)
-      defer { citiesCursor.close() }
-
-      for row in citiesCursor {
-        cities.append(try row.get().decodeByColumnName(City.self))
-      }
-
-      // regions
-      let regionsText = "SELECT * FROM regions;"
-      let regionsStatement = try connection.prepareStatement(text: regionsText)
-      defer { regionsStatement.close() }
-
-      let regionsCursor = try regionsStatement.execute(retrieveColumnMetadata: true)
-      defer { regionsCursor.close() }
-
-      for row in regionsCursor {
-        regions.append(try row.get().decodeByColumnName(Region.self))
       }
     } catch {
       print(error)

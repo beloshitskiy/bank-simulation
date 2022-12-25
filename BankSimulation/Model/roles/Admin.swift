@@ -1,10 +1,3 @@
-//
-//  Admin.swift
-//  BankSimulation
-//
-//  Created by Denis Beloshitskiy on 12/17/22.
-//
-
 import Foundation
 
 struct Admin: Codable, Hashable {

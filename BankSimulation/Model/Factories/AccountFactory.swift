@@ -1,10 +1,3 @@
-//
-//  AccountFactory.swift
-//  BankSimulation
-//
-//  Created by Denis Beloshitskiy on 12/24/22.
-//
-
 import Foundation
 
 final class AccountFactory {
