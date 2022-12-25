@@ -9,41 +9,37 @@ import Foundation
 import PostgresClientKit
 
 final class LoginPageViewModel {
-  weak var appState: AppState?
+  var appState: AppState
 
-  init(appState: AppState? = nil) {
+  init(appState: AppState) {
     self.appState = appState
   }
 
-  // return client
   func performClientLogin(with cr: Credentials) -> Client? {
-    guard let appState,
-          let ind = appState.storage.credentials
-          .first(where: { $0.login == cr.login && $0.password == cr.password })?.id
-    else { return nil }
+    guard let connection = appState.connection else { return nil }
 
-    return appState.storage.clients.first { $0.credentials == ind }
+    let query = """
+      SELECT c.id
+      FROM clients c
+      INNER JOIN credentials cr ON c.credentials = cr.id
+      WHERE cr.login = '\(cr.login)';
+      """
 
-//    let query = """
-//                SELECT c.client_id
-//                FROM clients c
-//                INNER JOIN credentials cr ON c.credentials = cr.credentials_id
-//                WHERE cr.login = 'Hendrix';
-//    """
-//
-//    do {
-//      let statement = try connection.prepareStatement(text: query)
-//      defer { statement.close() }
-//
-//      let cursor = try statement.execute()
-//      defer { cursor.close() }
-//
-//      for row in cursor {
-//        return try row.get().columns.first?.int()
-//      }
-//
-//    } catch {
-//      print(error)
-//    }
+    do {
+      let statement = try connection.prepareStatement(text: query)
+      defer { statement.close() }
+
+      let cursor = try statement.execute()
+      defer { cursor.close() }
+
+      for row in cursor {
+        let clientId = try row.get().columns.first?.int()
+        return appState.storage.clients.first { $0.id == clientId }
+      }
+      
+    } catch {
+      print(error)
+    }
+    return nil
   }
 }

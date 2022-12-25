@@ -38,7 +38,6 @@
 		2DDDC4B02951140200BD5AB1 /* LoginPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC4AF2951140200BD5AB1 /* LoginPageViewModel.swift */; };
 		2DDDC4B22951147C00BD5AB1 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC4B12951147C00BD5AB1 /* Storage.swift */; };
 		2DE4DEB82938E56F00500801 /* BankSimulationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4DEB72938E56F00500801 /* BankSimulationApp.swift */; };
-		2DE4DEBA2938E56F00500801 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4DEB92938E56F00500801 /* ContentView.swift */; };
 		2DE4DEBC2938E57000500801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE4DEBB2938E57000500801 /* Assets.xcassets */; };
 		2DE4DEBF2938E57000500801 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE4DEBE2938E57000500801 /* Preview Assets.xcassets */; };
 		2DE4DEC92938E62800500801 /* PostgresClientKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2DE4DEC82938E62800500801 /* PostgresClientKit */; };
@@ -77,7 +76,6 @@
 		2DDDC4B12951147C00BD5AB1 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2DE4DEB42938E56F00500801 /* BankSimulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankSimulation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE4DEB72938E56F00500801 /* BankSimulationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankSimulationApp.swift; sourceTree = "<group>"; };
-		2DE4DEB92938E56F00500801 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2DE4DEBB2938E57000500801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DE4DEBE2938E57000500801 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DE4DEC02938E57000500801 /* BankSimulation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BankSimulation.entitlements; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				2DE4DEB72938E56F00500801 /* BankSimulationApp.swift */,
-				2DE4DEB92938E56F00500801 /* ContentView.swift */,
 				2DDDC4AF2951140200BD5AB1 /* LoginPageViewModel.swift */,
 				2D590A1E295711DF0096F2FC /* PageViews */,
 				2D590A11295676F30096F2FC /* State */,
@@ -315,7 +312,6 @@
 				2D43E5CF294D155E00C14817 /* LoginPageView.swift in Sources */,
 				2DC4C7AA295810380047D579 /* ClientFactory.swift in Sources */,
 				2DC4C7AF2958198F0047D579 /* ApplicationFactory.swift in Sources */,
-				2DE4DEBA2938E56F00500801 /* ContentView.swift in Sources */,
 				2D53562C294D1F7A00F8CE0B /* Office.swift in Sources */,
 				2D43E5D1294D168700C14817 /* Credentials.swift in Sources */,
 				2D53564B294D24EC00F8CE0B /* ConnectionConfiguration.swift in Sources */,
