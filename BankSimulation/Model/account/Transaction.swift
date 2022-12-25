@@ -8,14 +8,14 @@
 import Foundation
 
 struct Transaction: Codable, Hashable {
-  let transaction_id: Int
-  let sender_account: Int
-  let receiver_account: Int
-  let date: Date
-  let amount: Double
-  let type: TransactionType
-  let status: TransactionStatus
-  let description: String
+  var transaction_id: Int
+  var sender_account: Int
+  var receiver_account: Int
+  var date: Date
+  var amount: Double
+  var type: TransactionType
+  var status: TransactionStatus
+  var description: String
 }
 
 enum TransactionType: String, CaseIterable, Codable {

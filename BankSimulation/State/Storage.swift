@@ -17,7 +17,7 @@ final class Storage {
   var managers = [PersonalManager]()
   var admin = [Admin]()
   
-  var credentials = Set<Credentials>()
+  var credentials = [Credentials]()
 
   var accounts = [Account]()
   var applications = [Application]()
@@ -28,8 +28,6 @@ final class Storage {
   var regions = [Region]()
 
   // MARK: - loading data
-
-//  weak var appState: AppState?
 
   func loadData(with connection: Connection?) {
     guard let connection = connection else { return }
@@ -81,7 +79,7 @@ final class Storage {
       defer { credentialsCursor.close() }
       
       for row in credentialsCursor {
-        credentials.insert(try row.get().decodeByColumnName(Credentials.self))
+        credentials.append(try row.get().decodeByColumnName(Credentials.self))
       }
       
       // accounts

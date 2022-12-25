@@ -9,10 +9,10 @@ import Foundation
 import PostgresClientKit
 
 struct Client: Codable, Hashable {
-  let client_id: Int
+  var client_id: Int
 
   var address: String
-  var birthday: Date?
+  var birthday: Date
   var full_name: String
   var is_active: Bool
   var passport: Int
@@ -22,6 +22,7 @@ struct Client: Codable, Hashable {
   static let empty = Client(
     client_id: 0,
     address: "",
+    birthday: .distantPast,
     full_name: "",
     is_active: false,
     passport: 0,

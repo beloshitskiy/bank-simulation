@@ -21,6 +21,24 @@ struct ClientPageView: View {
             AccountCardView(account: account)
           }
         }.font(.title2).bold().foregroundColor(.white)
+        
+        
+        HStack {
+        
+          Button {
+//            let factory = AccountFactory()
+            
+            
+            
+          } label: {
+            Image(systemName: "plus")
+              .clipShape(Circle().stroke(lineWidth: 5))
+          }
+          
+          Text("Открыть новый счет")
+            .font(.headline).bold()
+        }
+        
       }
       .frame(width: 325)
 
@@ -118,3 +136,12 @@ struct TransactionCardView: View {
     }
   }
 }
+
+//struct NewAccountView: View {
+//
+//
+//  var body: some View {
+//
+//
+//  }
+//}

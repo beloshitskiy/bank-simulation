@@ -8,7 +8,7 @@
 import Foundation
 import PostgresClientKit
 
-final class LoginPageViewModel: ObservableObject {
+final class LoginPageViewModel {
   weak var appState: AppState?
 
   init(appState: AppState? = nil) {

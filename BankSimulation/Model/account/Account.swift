@@ -8,8 +8,8 @@
 import Foundation
 
 struct Account: Codable, Hashable {
-  let account_id: Int
-  let client_id: Int
+  var account_id: Int
+  var client_id: Int
   var name: String
   var balance: Double
   var currency: Currency
@@ -17,6 +17,18 @@ struct Account: Codable, Hashable {
   var open_date: Date
   var status: AccountStatus
   var type: AccountType
+
+  static let empty = Account(
+    account_id: 0,
+    client_id: 0,
+    name: "",
+    balance: 0,
+    currency: .RUB,
+    interest_rate: 0.0,
+    open_date: .now,
+    status: .inactive,
+    type: .regular
+  )
 }
 
 enum AccountStatus: String, CaseIterable, Codable {

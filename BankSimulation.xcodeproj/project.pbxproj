@@ -29,6 +29,12 @@
 		2D590A1B295711BB0096F2FC /* PersonalManagerPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1A295711BB0096F2FC /* PersonalManagerPageView.swift */; };
 		2D590A1D295711C30096F2FC /* AdminPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1C295711C30096F2FC /* AdminPageView.swift */; };
 		2D590A20295712720096F2FC /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D590A1F295712720096F2FC /* SignUpPage.swift */; };
+		2DC4C7A8295744FF0047D579 /* AccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4C7A7295744FF0047D579 /* AccountFactory.swift */; };
+		2DC4C7AA295810380047D579 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4C7A9295810380047D579 /* ClientFactory.swift */; };
+		2DC4C7AD295813460047D579 /* CredentialsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4C7AC295813460047D579 /* CredentialsFactory.swift */; };
+		2DC4C7AF2958198F0047D579 /* ApplicationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4C7AE2958198F0047D579 /* ApplicationFactory.swift */; };
+		2DC4C7B129581BD90047D579 /* Array+Postgres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4C7B029581BD90047D579 /* Array+Postgres.swift */; };
+		2DC4C7B3295820570047D579 /* String+Postgres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC4C7B2295820570047D579 /* String+Postgres.swift */; };
 		2DDDC4B02951140200BD5AB1 /* LoginPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC4AF2951140200BD5AB1 /* LoginPageViewModel.swift */; };
 		2DDDC4B22951147C00BD5AB1 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDC4B12951147C00BD5AB1 /* Storage.swift */; };
 		2DE4DEB82938E56F00500801 /* BankSimulationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4DEB72938E56F00500801 /* BankSimulationApp.swift */; };
@@ -61,6 +67,12 @@
 		2D590A1A295711BB0096F2FC /* PersonalManagerPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalManagerPageView.swift; sourceTree = "<group>"; };
 		2D590A1C295711C30096F2FC /* AdminPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPageView.swift; sourceTree = "<group>"; };
 		2D590A1F295712720096F2FC /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		2DC4C7A7295744FF0047D579 /* AccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFactory.swift; sourceTree = "<group>"; };
+		2DC4C7A9295810380047D579 /* ClientFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
+		2DC4C7AC295813460047D579 /* CredentialsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsFactory.swift; sourceTree = "<group>"; };
+		2DC4C7AE2958198F0047D579 /* ApplicationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFactory.swift; sourceTree = "<group>"; };
+		2DC4C7B029581BD90047D579 /* Array+Postgres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Postgres.swift"; sourceTree = "<group>"; };
+		2DC4C7B2295820570047D579 /* String+Postgres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Postgres.swift"; sourceTree = "<group>"; };
 		2DDDC4AF2951140200BD5AB1 /* LoginPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewModel.swift; sourceTree = "<group>"; };
 		2DDDC4B12951147C00BD5AB1 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		2DE4DEB42938E56F00500801 /* BankSimulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankSimulation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +98,9 @@
 		2D43E5D2294D168C00C14817 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2DC4C7B029581BD90047D579 /* Array+Postgres.swift */,
+				2DC4C7B2295820570047D579 /* String+Postgres.swift */,
+				2DC4C7AB295812220047D579 /* Factories */,
 				2D53563E294D216100F8CE0B /* account */,
 				2D53563A294D213800F8CE0B /* roles */,
 			);
@@ -146,6 +161,17 @@
 				2D590A1C295711C30096F2FC /* AdminPageView.swift */,
 			);
 			path = PageViews;
+			sourceTree = "<group>";
+		};
+		2DC4C7AB295812220047D579 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				2DC4C7A7295744FF0047D579 /* AccountFactory.swift */,
+				2DC4C7A9295810380047D579 /* ClientFactory.swift */,
+				2DC4C7AC295813460047D579 /* CredentialsFactory.swift */,
+				2DC4C7AE2958198F0047D579 /* ApplicationFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		2DE4DEAB2938E56F00500801 = {
@@ -269,14 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC4C7AD295813460047D579 /* CredentialsFactory.swift in Sources */,
 				2D590A1029565F550096F2FC /* DBTypes.swift in Sources */,
 				2D590A1D295711C30096F2FC /* AdminPageView.swift in Sources */,
 				2D535632294D201600F8CE0B /* Admin.swift in Sources */,
 				2D53563D294D215B00F8CE0B /* Account.swift in Sources */,
 				2D43E5CB294D144500C14817 /* AppState.swift in Sources */,
+				2DC4C7A8295744FF0047D579 /* AccountFactory.swift in Sources */,
 				2DDDC4B22951147C00BD5AB1 /* Storage.swift in Sources */,
 				2D590A20295712720096F2FC /* SignUpPage.swift in Sources */,
 				2D43E5CF294D155E00C14817 /* LoginPageView.swift in Sources */,
+				2DC4C7AA295810380047D579 /* ClientFactory.swift in Sources */,
+				2DC4C7AF2958198F0047D579 /* ApplicationFactory.swift in Sources */,
 				2DE4DEBA2938E56F00500801 /* ContentView.swift in Sources */,
 				2D53562C294D1F7A00F8CE0B /* Office.swift in Sources */,
 				2D43E5D1294D168700C14817 /* Credentials.swift in Sources */,
@@ -284,7 +314,9 @@
 				2D535640294D228800F8CE0B /* Application.swift in Sources */,
 				2D590A1B295711BB0096F2FC /* PersonalManagerPageView.swift in Sources */,
 				2DE4DEB82938E56F00500801 /* BankSimulationApp.swift in Sources */,
+				2DC4C7B3295820570047D579 /* String+Postgres.swift in Sources */,
 				2D535644294D242300F8CE0B /* SidebarView.swift in Sources */,
+				2DC4C7B129581BD90047D579 /* Array+Postgres.swift in Sources */,
 				2D535635294D205C00F8CE0B /* Client.swift in Sources */,
 				2D535639294D20E600F8CE0B /* Passport.swift in Sources */,
 				2D590A1929570DEB0096F2FC /* ClientPageView.swift in Sources */,

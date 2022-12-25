@@ -8,10 +8,19 @@
 import Foundation
 
 struct Passport: Codable {
-  let passport_id: Int
-  let issued_at: Date
-  let issued_by: String
-  let series: Int
-  let number: Int
-  let is_validated: Bool
+  var passport_id: Int
+  var issued_at: Date
+  var issued_by: String
+  var series: Int
+  var number: Int
+  var is_validated: Bool
+
+  static let empty = Passport(
+    passport_id: 0,
+    issued_at: .distantPast,
+    issued_by: "",
+    series: 0,
+    number: 0,
+    is_validated: false
+  )
 }

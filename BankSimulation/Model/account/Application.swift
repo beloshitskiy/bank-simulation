@@ -8,13 +8,13 @@
 import Foundation
 
 struct Application: Codable {
-  let application_id: Int
-  let client: Int
-  let personal_manager: Int
-  let application_date: Date
-  let type: ApplicationType
-  let result: ApplicationResult
-  let description: String
+  var application_id: Int
+  var client: Int
+  var personal_manager: Int
+  var application_date: Date
+  var type: ApplicationType
+  var result: ApplicationResult
+  var description: String
 }
 
 enum ApplicationType: String, CaseIterable, Codable {
